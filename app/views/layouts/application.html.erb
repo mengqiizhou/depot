@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Depot</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<body class='<%= controller.controller_name %>'>
+
+  <div id="banner">
+   <%= image_tag("https://edc2.healthtap.com/ht-staging/user_answer/reference_image/36566/topic_medium/Getting_Fit.jpeg", size: "100x50") %>
+   <%= @page_title || "Store" %>
+  </div>
+  <div id="columns">
+  <div id="side">
+  <ul>
+   <li><a href="http://www.google.com">Home</a></li>
+   <li><a href="http://www.google.com">Questions</a></li>
+   <li><a href="http://www.google.com">News</a></li>
+   <li><a href="http://www.google.com">Contact</a></li>
+  </ul>
+  </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
+
+</body>
+</html>
